@@ -1,4 +1,4 @@
-import './globals.css'
+import './globals.css';
 
 export default function RootLayout({ children }) {
   return (
@@ -8,7 +8,20 @@ export default function RootLayout({ children }) {
         head.js. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
       */}
       <head />
-      <body>{children}</body>
+
+      <body>
+        <nav style={{ padding: '1rem' }}>
+          <ul>
+            <li style={{ display: 'flex', gap: '2rem' }}>
+              <a href="/">Home</a>
+              <a href="/about">About</a>
+              <a href="/login">Login</a>
+            </li>
+          </ul>
+        </nav>
+
+        {children}
+      </body>
     </html>
-  )
+  );
 }
